@@ -120,7 +120,7 @@ sum.bitmatrix <- function(obj, na.rm = FALSE){
 }
 
 #' @export
-get_sparcity <- function(obj){
+get_sparsity <- function(obj){
   stopifnot("bitmatrix" %in% class(obj))
   S <- bit:::sum.bit(obj$bitvector)
   L <- ncol(obj)*nrow(obj)
