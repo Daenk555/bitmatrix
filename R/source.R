@@ -8,8 +8,7 @@ bitmatrix_from_bitvector <- function(obj) {
 
 #' @export
 bitmatrix_from_matrix <- function(obj) {
-  stopifnot(is.matrix(obj))
-  stopifnot(!anyNA(obj))
+  stopifnot(is.matrix(obj) | !anyNA(obj))
   value <- obj |> t() |> c() |> as.logical() |> as.bit() |> bitmatrix_from_bitvector()
   attr(value, ".Dimnames") 	<- list(rownames(obj),colnames(obj))
   attr(value, ".Dim")		<- dim(obj)
