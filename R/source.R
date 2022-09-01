@@ -60,7 +60,7 @@ colnames.bitmatrix <- function(obj){
 #' @export
 `[.bitmatrix` <- function(x, i=1:nrow(x),j=1:ncol(x)) {
   
-  stopifnot("bitmatrix" %in% class(obj))
+  stopifnot("bitmatrix" %in% class(x))
 
   l_i <- length(i)
   l_j <- length(j)
